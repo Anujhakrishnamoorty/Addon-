@@ -1,0 +1,184 @@
+1) get the input from user:
+
+import java.util.Scanner;
+   public class Main{
+       public static void main(String[]args){
+           Scanner s= new Scanner(System.in);
+           System.out.println("Enter your name");
+          char ch= s.nextLine().charAt(0);
+          
+           System.out.println(ch);
+       }
+   }
+
+or using string :
+
+import java.util.Scanner;
+   public class Main{
+       public static void main(String[]args){
+           Scanner s= new Scanner(System.in);
+           System.out.println("Enter your name");
+          String str= s.nextLine();
+          
+           System.out.println(str);
+     }
+}
+
+
+2)Class concept:
+
+class Objectoriented{
+    static int a=10;
+    static int b=20;
+    
+    
+    public static void Display(){
+        System.out.println("static method");
+    }
+}
+ public class Main{
+    public static void main(String[]args){
+        System.out.println(Objectoriented.a);
+        Objectoriented.Display();
+    }
+}
+
+3)static method:
+
+class Objectoriented{
+    static int a=10;
+    static int b=20;
+    
+    
+    public static void Display(){
+        System.out.println("static method");
+    }
+}
+class Main{
+    public static void main(String[]args){
+        System.out.println(Objectoriented.a);
+        Objectoriented.Display();
+    }
+}
+ 
+4)static and non static method:
+
+class Main{
+    public static void main(String[]args){
+        //non-static 
+        Objectoriented ref=new Objectoriented();
+        System.out.println(ref.x);
+        //static member
+        System.out.println(Objectoriented.a);
+        Objectoriented.Display();
+    }
+}
+
+class Objectoriented{
+    int x=5;
+    static int a=10;
+   public static void Display(){
+        System.out.println("static method");
+    }
+}
+
+5)Default constructor:
+
+class Demo{
+    public static void main(String[]args){
+        Sample ref=new Sample();
+    }
+    }
+class Sample{
+    Sample(){
+System.out.println("defalut constructor");        
+    }
+}
+
+6)constuctor:
+
+class Demo{
+    public static void main(String[]args){
+        Sample ref=new Sample( "BMW","M5");
+           Sample ref1=new Sample( "audi","M5");
+        System.out.println(ref.carname);
+         System.out.println(ref.carmodel);
+         System.out.println(ref1.carname);
+         System.out.println(ref1.carmodel);
+    }
+    }
+class Sample{
+    String carname;
+    String carmodel;
+    Sample(String carname,String carmodel){
+        this.carname=carname;
+        this.carmodel=carmodel;
+        
+    }
+}
+
+7)accholder name and balance:
+class Demo{
+    public static void main(String[]args){
+       Account ac=new Account("Anu","3000");
+       System.out.println("Accountholder Name"+ac.getAccholder());
+       System.out.println("Balance amt"+ac.getBalance());
+    }
+    }
+class Account{
+     Private String Accholder;
+     Private int Balance;
+    Account(String Accholder,int Balance){
+        this.Accholder=Accholder;
+        this.Balance=Balance;
+    }
+    Public String getAccholder(){
+        return Accholder;
+    }
+    Public int getBalance(){
+        return Balance;
+    }
+}
+        
+8) accholder name and balance (update):
+        
+    class Demo {
+    public static void main(String[] args) {
+        Account ac = new Account("Anu", 3000);
+        System.out.println("Accountholder Name: " + ac.getAccholder());
+        System.out.println("Balance amt: " + ac.getBalance());
+        System.out.println("Balance amt: " + ac.getBalance());
+        
+        ac.setAccholder("Sona");
+        System.out.println("Updated Accountholder Name: " + ac.getAccholder());
+    }
+}
+
+class Account {
+    private String accHolder;   
+    private int balance;        
+    
+  
+    Account(String accHolder, int balance) {
+        this.accHolder = accHolder;
+        this.balance = balance;
+    }
+    
+    
+    public String getAccholder() {
+        return accHolder;
+    }
+    
+   
+    public int getBalance() {
+        return balance;
+    }
+    
+    
+    public void setAccholder(String accHolder) {
+        this.accHolder = accHolder;
+    }
+}
+
+9)    
+
